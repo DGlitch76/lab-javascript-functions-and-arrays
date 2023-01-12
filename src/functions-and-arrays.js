@@ -1,24 +1,90 @@
 // Iteration #1: Find the maximum
-function maxOfTwoNumbers() {}
+function maxOfTwoNumbers(a,b) {
+if (a>b){
+return a
+} else{
+  return b
+}
+}
 
 
 
 // Iteration #2: Find longest word
 const words = ['mystery', 'brother', 'aviator', 'crocodile', 'pearl', 'orchard', 'crackpot'];
 
-function findLongestWord() {}
+let longWord ;
+let wordLength=0;
+
+function findLongestWord() {
+    for (let i = 0; i < words.length; i++)
+      if (words[i].length > wordLength) {
+        wordLength = words[i].length;
+        longWord = words[i].length;
+
+      }
+ return `${longWord}`;
+
+  }
+  
+  
+
 
 
 
 // Iteration #3: Calculate the sum
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
-function sumNumbers() {}
+function sumNumbers(num) {
+  let count = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    count += num[i];
+    return count;
+  }
+}
 
 
+//not able to get this // Charlie code below
+//const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
+f//unction sumNumbers(num) {
+ // let count = 0;
+ // for (let i = 0; i < num.length; i++) {
+ //  count += num[i];
+ // }
+ // if (i => num.length) { // this goes over my head
+//  return count; 
+//}
+//}
+
+  
 // Iteration #3.1 Bonus:
-function sum() {}
+const mixedArr = [6, 12, 'miami', 1, true, 'barca', '200', 'lisboa', 8, 10];
+
+
+function sum(element) {
+  let count = 0;
+  for (let i = 0; i < element.length; i++) {
+    if (typeof element[i] === "boolean"){      
+    if (element[i] === true) {
+      count += 1;
+    } else {count += 0;}
+    }
+    else if (typeof element[i] === "number"){
+      count += element[i];
+    }
+    else if (typeof element[i] === "string"){
+      count += element[i].length;
+    }
+    else if (typeof element[i] === `object` || typeof element[i] === `array`){
+      throw new Error("Unsupported Data Type");
+        }
+  }
+  // taken from Charlies code
+  //makes this work otherwise above code didn't pass the test
+  if (i => element.length) { // this still  goes over my head
+      return count;
+  }
+}
 
 
 
@@ -26,7 +92,12 @@ function sum() {}
 // Level 1: Array of numbers
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 
-function averageNumbers() {}
+function averageNumbers(averageCal) {
+  for (let i = 0; i < numbersAvg.length; i++) {
+    count += averageCal[i];
+  }
+  return count / numbersAvg.length;
+}
 
 
 // Level 2: Array of strings
