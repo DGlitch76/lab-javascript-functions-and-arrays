@@ -38,7 +38,12 @@ function sumNumbers(num) {
   let count = 0;
   for (let i = 0; i < numbers.length; i++) {
     count += num[i];
-    return count;
+    if (numbers.length === []){
+      return 0;
+    }
+    else{
+      return count;
+    }
   }
 }
 
@@ -46,7 +51,7 @@ function sumNumbers(num) {
 //not able to get this // Charlie code below
 //const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
-f//unction sumNumbers(num) {
+f//function sumNumbers(num) {
  // let count = 0;
  // for (let i = 0; i < num.length; i++) {
  //  count += num[i];
@@ -62,6 +67,8 @@ const mixedArr = [6, 12, 'miami', 1, true, 'barca', '200', 'lisboa', 8, 10];
 
 
 function sum(element) {
+
+  
   let count = 0;
   for (let i = 0; i < element.length; i++) {
     if (typeof element[i] === "boolean"){      
@@ -75,20 +82,21 @@ function sum(element) {
     else if (typeof element[i] === "string"){
       count += element[i].length;
     }
-    else if (typeof element[i] === `object` || typeof element[i] === `array`){
-      throw new Error("Unsupported Data Type");
-        }
   }
   // taken from Charlies code
   //makes this work otherwise above code didn't pass the test
-  if (i => element.length) { // this still  goes over my head
+  if (i => element.length) { // confirm if this is "when passed array" condition
       return count;
+  }
+
+  if (typeof element[i] === `object` || typeof element[i] === `array`){
+    throw new Error('Unsupported Data');
   }
 }
 
 
 
-// Iteration #4: Calculate the average
+// Iteration #4: Calculate the average // I0m lost at this point
 // Level 1: Array of numbers
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 
@@ -96,7 +104,7 @@ function averageNumbers(averageCal) {
   for (let i = 0; i < numbersAvg.length; i++) {
     count += averageCal[i];
   }
-  return count / numbersAvg.length;
+  return averageCal / numbersAvg.length;
 }
 
 
@@ -123,7 +131,11 @@ const wordsUnique = [
   'bring'
 ];
 
-function uniquifyArray() {}
+function uniquifyArray() {
+
+
+  
+}
 
 
 
