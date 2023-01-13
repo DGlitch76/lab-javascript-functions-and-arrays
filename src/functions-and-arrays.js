@@ -8,6 +8,15 @@ return a
 }
 
 
+// got to realize I need to go through all the materials 
+//as I was very confused and mixing everything 
+//in my head!! 
+
+// at this point I was not able to code anything
+// without research... which made me thing
+// what was I thinking when joining the bootcamp!!!
+
+
 
 // Iteration #2: Find longest word
 const words = ['mystery', 'brother', 'aviator', 'crocodile', 'pearl', 'orchard', 'crackpot'];
@@ -38,7 +47,7 @@ function sumNumbers(num) {
   let count = 0;
   for (let i = 0; i < numbers.length; i++) {
     count += num[i];
-    if (numbers.length === []){
+    if (!numberts.length){
       return 0;
     }
     else{
